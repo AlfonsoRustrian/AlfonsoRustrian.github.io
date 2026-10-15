@@ -4,123 +4,604 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alfonso Rustrián | Sitio personal</title>
-  <meta name="description" content="Sitio personal de Alfonso Rustrián: biografía, trayectoria, artículos y publicaciones.">
-  <meta name="robots" content="index, follow">
+
+  <title>Alfonso Rustrián | Perfil profesional</title>
+
+  <meta name="description" content="Sitio profesional de Alfonso Rustrián. Perfil, trayectoria, formación, proyectos y publicaciones sobre procesos, operaciones y transformación digital.">
+
   <meta name="author" content="Alfonso Rustrián">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#10243a">
+
   <link rel="canonical" href="https://alfonsorustrian.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alfonso Rustrián | Perfil profesional">
+  <meta property="og:description" content="Conoce el perfil profesional, los proyectos y las publicaciones de Alfonso Rustrián.">
+  <meta property="og:url" content="https://alfonsorustrian.github.io/">
+  <meta property="og:image" content="https://alfonsorustrian.github.io/alfonso.jpeg">
+
   <style>
-    * { box-sizing: border-box; }
+    :root {
+      --navy: #10243a;
+      --blue: #245c87;
+      --gold: #d6a85f;
+      --light: #f4f7fb;
+      --white: #ffffff;
+      --text: #263445;
+      --muted: #657487;
+      --border: #e0e7ef;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--light);
       line-height: 1.7;
-      color: #243247;
-      background: #f4f7fb;
     }
-    header {
-      background: #142a43;
-      color: white;
-      padding: 20px;
+
+    a {
+      color: var(--blue);
     }
-    nav, main, footer {
-      max-width: 960px;
+
+    a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(1080px, 90%);
       margin: auto;
     }
-    nav {
+
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 18px 0;
+    }
+
+    .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
+      gap: 20px;
       flex-wrap: wrap;
     }
-    nav a {
-      color: white;
+
+    .brand {
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: bold;
       text-decoration: none;
-      margin-right: 12px;
     }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
     .hero {
-      background: #203f60;
-      color: white;
-      padding: 60px 24px;
+      background: linear-gradient(135deg, #10243a, #245c87);
+      color: var(--white);
+      padding: 76px 0;
     }
-    .hero-inner {
-      max-width: 912px;
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 0.85rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1.12;
+      margin: 15px 0;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #e4edf6;
+    }
+
+    .photo-frame {
+      max-width: 330px;
       margin: auto;
+      padding: 9px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 24px;
     }
-    h1 { font-size: clamp(2.2rem, 6vw, 3.8rem); }
-    main { padding: 20px; }
-    section { padding: 24px 0; }
-    h2 { color: #142a43; }
+
+    .photo-frame img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 17px;
+      background: #e3eaf1;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 12px 22px;
+      border-radius: 8px;
+      background: var(--gold);
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 65px 0;
+      scroll-margin-top: 20px;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-size: 2rem;
+      margin: 0 0 10px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0 0 28px;
+    }
+
+    .white-section {
+      background: var(--white);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
     .card {
-      background: white;
-      border: 1px solid #dce4ed;
-      border-radius: 12px;
-      padding: 22px;
-      margin: 14px 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 5px 18px rgba(16,36,58,0.04);
     }
+
+    .white-section .card {
+      background: var(--light);
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin-top: 0;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 10px;
+      margin: 4px 4px 4px 0;
+      background: #e5edf6;
+      color: var(--navy);
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+
+    .timeline {
+      border-left: 3px solid var(--gold);
+      padding-left: 24px;
+      margin-left: 6px;
+    }
+
+    .timeline-item {
+      margin-bottom: 28px;
+    }
+
+    .timeline-item h3 {
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+
+    .note {
+      padding: 15px 18px;
+      border-left: 4px solid var(--gold);
+      background: #fff8eb;
+      border-radius: 5px;
+    }
+
+    .contact-box {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 18px;
+      padding: 35px;
+    }
+
+    .contact-box h2 {
+      color: var(--white);
+    }
+
+    .contact-box a {
+      color: #f2cb87;
+    }
+
     footer {
-      padding: 25px 20px;
-      color: #5e6c7c;
+      background: #0a1929;
+      color: #d5deea;
+      text-align: center;
+      padding: 28px 0;
+      font-size: 0.9rem;
     }
-    @media (max-width: 600px) {
-      .hero { padding: 40px 20px; }
+
+    footer a {
+      color: #f2cb87;
+    }
+
+    @media (max-width: 760px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 48px 0;
+      }
+
+      .photo-frame {
+        max-width: 250px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      section {
+        padding: 45px 0;
+      }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alfonso Rustrián",
+    "url": "https://alfonsorustrian.github.io/",
+    "image": "https://alfonsorustrian.github.io/alfonso.jpeg",
+    "description": "Perfil profesional y publicaciones sobre procesos, operaciones y transformación digital."
+  }
+  </script>
 </head>
+
 <body>
+
   <header>
-    <nav aria-label="Menú principal">
-      <strong>Alfonso Rustrián</strong>
-      <div>
-        <a href="#biografia">Biografía</a>
+    <div class="container nav">
+      <a class="brand" href="#inicio">Alfonso Rustrián</a>
+
+      <nav aria-label="Navegación principal">
+        <a href="#perfil">Perfil</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#formacion">Formación</a>
+        <a href="#proyectos">Proyectos</a>
         <a href="#articulos">Artículos</a>
-        <a href="#galeria">Galería</a>
         <a href="#contacto">Contacto</a>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
-  <div class="hero">
-    <div class="hero-inner">
-      <h1>Alfonso Rustrián</h1>
-      <p>Bienvenido a mi sitio personal: un espacio para conocer mi trayectoria, publicaciones y proyectos.</p>
-    </div>
-  </div>
-
   <main>
-    <section id="biografia">
-      <h2>Biografía</h2>
-      <div class="card">
-        Aquí incorporaremos una biografía profesional con información verificada.
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Sitio profesional</div>
+
+          <h1>Alfonso Rustrián</h1>
+
+          <p>
+            Ingeniería de procesos, mejora continua
+            y transformación digital.
+          </p>
+
+          <p>
+            Un espacio para presentar mi perfil profesional,
+            compartir conocimientos y documentar proyectos
+            relacionados con las operaciones y la innovación.
+          </p>
+
+          <a class="button" href="#perfil">Conoce mi perfil</a>
+        </div>
+
+        <div class="photo-frame">
+          <img
+            src="alfonso.jpeg"
+            alt="Fotografía de Alfonso Rustrián"
+            width="660"
+            height="825"
+            fetchpriority="high">
+        </div>
       </div>
     </section>
 
-    <section id="articulos">
-      <h2>Artículos y publicaciones</h2>
-      <article class="card">
-        <h3>Próximamente</h3>
-        <p>Aquí publicaremos artículos originales y proyectos.</p>
-      </article>
+    <section class="white-section" id="perfil">
+      <div class="container">
+        <h2 class="section-title">Perfil profesional</h2>
+
+        <p class="section-intro">
+          Un perfil orientado a la optimización de procesos,
+          las operaciones, la mejora continua y el uso de
+          herramientas digitales para organizar y analizar
+          información.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Procesos y operaciones</h3>
+            <p>
+              Interés profesional en el análisis, la documentación
+              y la mejora de procesos de trabajo.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Transformación digital</h3>
+            <p>
+              Organización de información y exploración de
+              soluciones digitales que faciliten las actividades
+              operativas.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Mejora continua</h3>
+            <p>
+              Enfoque en la identificación de oportunidades
+              de mejora y el seguimiento de indicadores.
+            </p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="galeria">
-      <h2>Galería</h2>
-      <div class="card">
-        Aquí añadiremos fotografías autorizadas y sus descripciones.
+    <section id="experiencia">
+      <div class="container">
+        <h2 class="section-title">Experiencia profesional</h2>
+
+        <p class="section-intro">
+          Esta sección se completará con los puestos, las empresas,
+          las fechas y las responsabilidades confirmadas en la
+          trayectoria profesional.
+        </p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Experiencia profesional</h3>
+            <p>
+              Añadir aquí el nombre del puesto, la empresa,
+              el periodo y las principales responsabilidades.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Proyectos y responsabilidades</h3>
+            <p>
+              Describir proyectos reales, herramientas utilizadas
+              y resultados que puedan documentarse.
+            </p>
+          </div>
+        </div>
+
+        <p class="note">
+          Nota: los datos de esta sección deben completarse
+          y verificarse antes de publicar una trayectoria
+          profesional detallada.
+        </p>
+      </div>
+    </section>
+
+    <section class="white-section" id="formacion">
+      <div class="container">
+        <h2 class="section-title">Formación y competencias</h2>
+
+        <p class="section-intro">
+          Apartado destinado a los estudios, las certificaciones
+          y las habilidades que figuran en el currículum.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Formación académica</h3>
+            <p>
+              Añadir el título oficial, la institución y el año
+              de finalización, una vez confirmados.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Competencias profesionales</h3>
+            <div>
+              <span class="tag">Mejora continua</span>
+              <span class="tag">Procesos</span>
+              <span class="tag">Operaciones</span>
+              <span class="tag">Indicadores KPI</span>
+              <span class="tag">Análisis de datos</span>
+              <span class="tag">Documentación</span>
+            </div>
+            <p>
+              Mantener únicamente las competencias que
+              correspondan a su experiencia real.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Herramientas y cursos</h3>
+            <p>
+              Incorporar software, cursos y certificaciones
+              confirmados, indicando el nivel cuando proceda.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <div class="container">
+        <h2 class="section-title">Proyectos</h2>
+
+        <p class="section-intro">
+          Espacio para presentar trabajos reales y explicar
+          el problema, el método utilizado y los resultados.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Optimización de procesos</h3>
+            <p>
+              Documentar un caso real de análisis o mejora
+              operativa, con autorización para compartirlo.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Digitalización de información</h3>
+            <p>
+              Describir una iniciativa real de organización
+              de datos, reportes o documentación.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Indicadores y análisis</h3>
+            <p>
+              Explicar un proyecto real de seguimiento
+              de indicadores o análisis de resultados.
+            </p>
+          </article>
+        </div>
+
+        <p class="note">
+          Estas tarjetas son espacios preparados para futuros
+          proyectos, no afirmaciones de trabajos ya realizados.
+        </p>
+      </div>
+    </section>
+
+    <section class="white-section" id="articulos">
+      <div class="container">
+        <h2 class="section-title">Artículos y publicaciones</h2>
+
+        <p class="section-intro">
+          Un espacio para publicar contenido original sobre
+          procesos, operaciones, mejora continua y tecnología.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Cómo documentar un proceso de trabajo</h3>
+            <p>
+              Ideas para estructurar procedimientos, asignar
+              responsabilidades y mantener documentación clara.
+            </p>
+            <p><strong>Estado:</strong> idea para desarrollar.</p>
+          </article>
+
+          <article class="card">
+            <h3>Indicadores para evaluar procesos</h3>
+            <p>
+              Una introducción a los indicadores, sus objetivos
+              y su interpretación responsable.
+            </p>
+            <p><strong>Estado:</strong> idea para desarrollar.</p>
+          </article>
+
+          <article class="card">
+            <h3>Transformación digital en operaciones</h3>
+            <p>
+              Reflexiones sobre herramientas digitales y
+              oportunidades de mejora en el trabajo.
+            </p>
+            <p><strong>Estado:</strong> idea para desarrollar.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <section id="contacto">
-      <h2>Redes sociales y contacto</h2>
-      <div class="card">
-        Añadiremos los enlaces oficiales de Alfonso.
+      <div class="container">
+        <div class="contact-box">
+          <h2>Contacto y redes profesionales</h2>
+
+          <p>
+            Para conocer más sobre mi trayectoria o consultar
+            acerca de mis publicaciones, visita mis perfiles
+            profesionales oficiales.
+          </p>
+
+          <p>
+            <strong>LinkedIn:</strong>
+            <span>
+              Añadir aquí la dirección del perfil auténtico
+              de Alfonso.
+            </span>
+          </p>
+
+          <p>
+            <strong>Correo profesional:</strong>
+            Añadir una dirección de contacto autorizada.
+          </p>
+
+          <p>
+            No se han añadido enlaces sociales ni datos de
+            contacto ficticios.
+          </p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 Alfonso Rustrián. Sitio personal.</p>
+    <div class="container">
+      <p>
+        © <span id="year">2026</span> Alfonso Rustrián.
+        Sitio web personal.
+      </p>
+      <p>
+        <a href="#inicio">Volver al inicio</a>
+      </p>
+    </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
 </body>
 </html>
